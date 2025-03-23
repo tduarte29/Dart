@@ -1,0 +1,23 @@
+class Animal {
+  int id;
+  String nome;
+  String cor;
+
+  Animal(this.id, this.nome, this.cor);
+}
+
+class Cat extends Animal {
+  String som;
+
+  Cat(int id, String nome, String cor, this.som) : super(id, nome, cor);
+
+  void exibirDetalhes() {
+    print("ID:$id \nNome:$nome \nCor:$cor \nSom:$som");
+  }
+}
+
+void main() {
+  Cat gato1 = Cat(1, "Floquinho", "Branco", "Meow");
+  
+  gato1.exibirDetalhes(); 
+}
