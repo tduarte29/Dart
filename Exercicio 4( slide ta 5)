@@ -1,0 +1,45 @@
+class Camera {
+  int _id;
+  String _marca;
+  String _cor;
+  int _preco;
+
+  Camera(this._id, this._marca, this._cor, this._preco);
+
+  int get id => _id;
+  String get marca => _marca;
+  String get cor => _cor;
+  int get preco => _preco;
+
+  set id(int id) {
+    _id = id;
+  }
+
+  set marca(String marca) {
+    _marca = marca;
+  }
+
+  set cor(String cor) {
+    _cor = cor;
+  }
+
+  set preco(int preco) {
+    _preco = preco;
+  }
+
+  void exibirDetalhes() {
+    print("ID:$_id \nMarca:$_marca \nCor: $_cor \nPreço:R\$$_preco \n\n");
+  }
+}
+
+void main() {
+  Camera camera1 = Camera(1, 'Canon', 'Preta', 4000);
+  Camera camera2 = Camera(2, 'Nikon', 'Branca e Preta', 5000);
+  Camera camera3 = Camera(3, 'Sony', 'Cinza', 3000);
+
+  List<Camera> cameras = [camera1, camera2, camera3];
+
+  for (var camera in cameras) {
+    camera.exibirDetalhes();
+  }
+}
