@@ -3,7 +3,6 @@ class Laptop {
   String nome;
   int ram;
 
-
   Laptop(this.id, this.nome, this.ram);
 
   void exibirDetalhes() {
@@ -12,12 +11,10 @@ class Laptop {
 }
 
 void main() {
-  // Criando três objetos da classe Laptop
   Laptop laptop1 = Laptop(101, "Dell", 64);
   Laptop laptop2 = Laptop(201, "MacBook", 32);
   Laptop laptop3 = Laptop(301, "Asus",8);
 
-  // Exibindo os detalhes de cada laptop
   laptop1.exibirDetalhes();
   laptop2.exibirDetalhes();
   laptop3.exibirDetalhes();
