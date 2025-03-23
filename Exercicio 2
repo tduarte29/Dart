@@ -1,1 +1,26 @@
+class House{
+  int id;
+  String nome;
+  int preco;
 
+
+  House(this.id, this.nome, this.preco);
+
+  void exibirDetalhes() {
+    print("ID:$id, Nome:$nome, Preço:$preco Reais");
+  }
+}
+
+void main() {
+  
+ House casa1 = House(10, 'Casa Alphaville', 14900000);
+ House casa2 = House(20, 'Casa Periferica', 2500);
+ House casa3 = House(30, 'Casa Condominio', 20000);
+  
+ 
+  List<House> casinhas = [casa1, casa2, casa3];
+   
+  for (var casa in casinhas) {
+    casa.exibirDetalhes();
+  };
+}
